@@ -1,0 +1,41 @@
+@startuml
+abstract class Tarjeta{
+    + viajar()
+
+}
+
+class TarjetaRecargable extends Tarjeta{
+    - double saldo
+    - Central central
+
+    + TarjetaRecargable(Central central)
+    + double getSaldo()
+    + void recargar(int monto)
+    # boolean puedeViajar()
+    + void viajar()
+}
+TarjetaRecargable *-- Central
+
+class Central {
+    - double precio
+
+    + Central(double precio)
+    + void cambiarPrecio(double precio)
+    + double getPrecio()
+}
+
+class TarjetaFija extends Tarjeta{
+    - int viajes
+
+    + TarjetaFija(int viajes)
+    + int getViajes()
+    # boolean puedeViajar()
+    + void viajar()
+}
+
+class TarjetaRecargableDescuento extends TarjetaRecargable{
+    + void viajar()
+    # double precioViaje()
+
+}
+@enduml
