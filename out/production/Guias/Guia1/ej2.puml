@@ -1,0 +1,12 @@
+@startuml
+class ComplexNumber {
+    - double Real
+    - double Imaginary
+
+    + ComplexNumber(double real)
+    + ComplexNumber(double real, double imaginary)
+    + double getReal()
+    + double getImaginary()
+    + ComplexNumber add(ComplexNumber num)
+}
+@enduml

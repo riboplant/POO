@@ -1,0 +1,12 @@
+@startuml
+class Affiliate {
+    - String name
+    - String surname
+    - Date birth
+    - int number
+    - static int index
+
+    + Affiliate(String name, String surname, Date birth)
+    - getAndIncrement()
+}
+@enduml
