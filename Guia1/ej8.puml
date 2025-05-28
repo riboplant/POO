@@ -1,0 +1,42 @@
+@startuml
+abstract class Figure {
+    + getPerimieter()
+    + getArea()
+    + boolean belongs(Point p)
+}
+
+class Rectangle extends Figure {
+    - Point downLeft
+    - Point upRight
+    + Rectangle(Point p1, Point p2)
+    + double getPerimieter()
+    + double getArea()
+    + double base()
+    + double height()
+    + boolean belongs(Point p)
+}
+
+class Triangle extends Figure {
+    - Point point1
+    - Point point2
+    - Point point3
+    + Triangle(Point p1, Point p2, Point p3)
+    + double getPerimieter()
+    + double getArea()
+    + boolean belongs(Point p)
+}
+
+class Elipse extends Figure{
+    - Point center
+    - double xAxisRadius
+    - double yAxisRadius
+    + Elipse(Point c, double x, double y)
+    + getPerimieter()
+    + getArea()
+    + boolean belongs(Point p)
+}
+
+class Circle extends Elipse {
+    + Circle(Point c, double radius)
+}
+@enduml

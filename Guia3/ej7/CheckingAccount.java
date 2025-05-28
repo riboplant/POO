@@ -1,0 +1,17 @@
+package Guias.Guia3.ej7;
+
+import Guias.Guia3.ej7.BankAccount;
+
+public class CheckingAccount extends BankAccount {
+    private final double descubierto;
+
+
+    public CheckingAccount(int id, double descubierto){
+        super(id);
+        this.descubierto = descubierto;
+    }
+    @Override
+    protected boolean canExtract(double amount){
+        return amount >= balance + descubierto;
+    }
+}

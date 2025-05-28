@@ -1,0 +1,27 @@
+@startuml
+abstract class Expression {
+    + boolean evaluate()
+    + Expression not(Expression)
+    + Expression or(Expression)
+    + Expression and(expression)
+}
+
+class SimpleExpression extends Expression{
+    - boolean value
+    + SimpleExpression(boolean)
+    + setValue(boolean)
+}
+
+class OrExpression extends Expression{
+    + evaluate()
+    + OrExpression(Expression, Expression)
+}
+class AndExpression extends Expression{
+    + evaluate()
+    + AndExpression(Expression, Expression)
+}
+class NotExpression extends Expression{
+     + evaluate()
+     + NotExpression(Expression)
+ }
+@enduml

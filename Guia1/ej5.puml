@@ -1,0 +1,11 @@
+@startuml
+class Coordinate {
+    - double latitude
+    - double longitude
+
+    + Coordinate(double latitude, double longitude)
+    + boolean isWesternHemisphere
+    + boolean isSouthernHemisphere
+
+}
+@enduml

@@ -1,0 +1,12 @@
+@startuml
+class Gear {
+    - int chainring
+    - int cog
+    - int ratio
+
+    + Gear(int chairing, int cog)
+    + void changeChainring (n)
+    + void changeCog (n)
+    + int getRatio()
+}
+@enduml
