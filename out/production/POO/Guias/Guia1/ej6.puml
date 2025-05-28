@@ -1,0 +1,22 @@
+@startuml
+class Currency {
+    - String name
+    - char symbol
+    + String getName()
+    + char getSymbol
+}
+class Price {
+    - Currency priceCurrency
+    - double amount
+    + getCurrency()
+    + getAmount()
+    + getEntireAmount()
+    + Price convert(Courrency currency)
+}
+class Product {
+    - String name
+    - Price price
+    + Product(String name, Price price)
+    + getPrice()
+}
+@enduml
